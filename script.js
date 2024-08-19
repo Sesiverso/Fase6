@@ -21,6 +21,9 @@ function createPuzzle() {
     // Preenche a grade com as palavras
     words.forEach(word => placeWord(word.toUpperCase()));
 
+    // Preenche os espaços restantes com letras aleatórias
+    fillRandomLetters();
+
     // Exibe a grade
     displayPuzzle();
 }
@@ -64,6 +67,18 @@ function canPlaceWord(word, row, col, direction) {
     return true;
 }
 
+// Preenche os espaços restantes com letras aleatórias
+function fillRandomLetters() {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            if (puzzle[i][j] === '') {
+                puzzle[i][j] = alphabet[Math.floor(Math.random() * alphabet.length)];
+            }
+        }
+    }
+}
+
 // Exibe a grade do caça-palavras
 function displayPuzzle() {
     puzzleContainer.innerHTML = '';
@@ -73,7 +88,7 @@ function displayPuzzle() {
             cell.classList.add('cell');
             cell.dataset.row = i;
             cell.dataset.col = j;
-            cell.innerText = puzzle[i][j] || '';
+            cell.innerText = puzzle[i][j];
             cell.addEventListener('click', () => handleCellClick(i, j));
             puzzleContainer.appendChild(cell);
         }

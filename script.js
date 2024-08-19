@@ -135,3 +135,4 @@ function checkWord(row, col) {
 // Inicializa o jogo
 createPuzzle();
 updateWordList();
+

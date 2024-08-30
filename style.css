@@ -1,5 +1,5 @@
 body {
-    font-family: 'Display', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-image: url('https://img.freepik.com/fotos-gratis/paisagem-natural-com-deserto-de-desenho-animado-e-natureza-seca_23-2151797450.jpg?t=st=1725024350~exp=1725027950~hmac=b35345e25189261e473d9415abb0dcd60e289b5a70c51100756a0911122a43c3&w=1060');
     background-size: cover;
     background-position: center;
@@ -17,15 +17,12 @@ body {
     min-height: 200vh;
     padding: 50px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o container */
 }
 
 h1 {
-    color: #8b4513; /* Cor marrom claro */
+    color: #ffcc00; /* Amarelo para refletir o Ipê */
     font-size: 4em;
-    text-shadow: 3px 3px 5px #a0522d; /* Texto 3D */
+    text-shadow: 3px 3px #333;
     margin-bottom: 20px;
 }
 
@@ -39,47 +36,77 @@ p, ul {
 
 #wordsearch {
     display: grid;
-    grid-template-columns: repeat(10, 30px);
+    grid-template-columns: repeat(10, 40px); /* Aumente o tamanho das células se necessário */
     gap: 5px;
     justify-content: center;
     margin: 20px 0;
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Aumente o tamanho das células se necessário */
+    height: 40px; /* Aumente o tamanho das células se necessário */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5deb3; /* Cor do cerrado */
-    border: 1px solid #d2b48c; /* Cor de borda */
+    background-color: #fff;
+    border: 1px solid #ccc;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     transition: transform 0.2s, background-color 0.3s;
-    color: #6b8e23; /* Verde escuro */
-    text-shadow: 1px 1px 3px #a9a9a9; /* Texto 3D */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .cell:hover {
     transform: scale(1.1);
-    background-color: #deb887; /* Cor de destaque ao passar o mouse */
-    color: white;
+    background-color: #ffcc00; /* Amarelo para destacar */
+    color: #333;
 }
 
 .selected {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffcc00; /* Amarelo para destacar a seleção */
+    color: #333;
 }
 
 button {
     padding: 15px 30px;
     font-size: 22px;
-    font-family: 'Display', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #8b4513; /* Cor marrom do cerrado */
+    background-color: #4CAF50; /* Verde para refletir o Cerrado */
     color: white;
     transition: all 0.3s;
-    box-shadow: 0 5px #1c7430, 0 8px 15px rgba(0, 0, 0, 0.
+    box-shadow: 0 5px #388E3C, 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+button:active {
+    box-shadow: 0 3px #388E3C;
+    transform: translateY(2px);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px #388E3C, 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#check {
+    display: block;
+    margin: 20px auto;
+}
+
+#result {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #4CAF50; /* Verde para refletir o Cerrado */
+    text-shadow: 2px 2px #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let puzzle = createPuzzle(words);
     
-    // Renderizar o caça-palavras
     function renderPuzzle() {
         grid.innerHTML = '';
         puzzle.forEach(row => {
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     
-    // Criar uma matriz para o caça-palavras
     function createPuzzle(words) {
         const size = 9;
         let grid = Array.from({ length: size }, () => Array(size).fill(''));
@@ -66,13 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     
-    // Verificar palavras
     document.getElementById("check-words").addEventListener("click", () => {
         resultDiv.textContent = "Palavras verificadas!";
         // Lógica de verificação de palavras vai aqui
     });
     
-    // Mostrar dicas
     document.getElementById("show-tips").addEventListener("click", () => {
         tipsDiv.textContent = `Dicas: ${words.join(", ")}`;
     });

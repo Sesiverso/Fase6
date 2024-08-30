@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caça-Palavras sobre o Cerrado</title>
+    <title>Fase 1 - Caça-palavras dos Biomas</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Caça-Palavras sobre o Cerrado</h1>
-    <div id="game-container">
-        <div id="word-list">
-            <h2>Palavras para Encontrar</h2>
-            <ul id="words">
-                <!-- Lista de palavras -->
-            </ul>
-        </div>
-        <div id="puzzle-container">
-            <!-- Grade do caça-palavras -->
-        </div>
-        <div id="status">
-            <p id="status-text">Encontre todas as palavras!</p>
-        </div>
+    <div class="container">
+        <h1>Fase 1 - Caça-palavras dos Biomas</h1>
+        <p>Bioma: Cerrado</p>
+        <p>Dicas:</p>
+        <ul>
+            <li>1. Tipo de vegetação característica do Cerrado, com arbustos e árvores pequenas.</li>
+            <li>2. Ave comum no Cerrado, conhecida por seu canto.</li>
+            <li>3. Mamífero pequeno que habita o Cerrado, conhecido por sua agilidade.</li>
+            <li>4. Planta típica do Cerrado, utilizada na medicina popular.</li>
+            <li>5. Solo predominante no Cerrado, geralmente ácido e arenoso.</li>
+            <li>6. Tipo de árvore que se adapta ao clima do Cerrado, com casca espessa.</li>
+            <li>7. Região do Brasil onde o Cerrado está localizado.</li>
+            <li>8. Planta rasteira comum no Cerrado, resistente à seca.</li>
+            <li>9. Planta da família das leguminosas, importante para a vegetação do Cerrado.</li>
+            <li>10. Tipo de capim nativo do Cerrado, importante para a alimentação de animais.</li>
+        </ul>
+        <div id="wordsearch"></div>
+        <button id="check" onclick="checkWords()">Verificar Palavras</button>
+        <div id="result"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
-
-

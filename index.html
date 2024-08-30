@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fase 1 - Caça-palavras dos Biomas</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Caça-Palavras do Cerrado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Fase 1 - Caça-palavras dos Biomas</h1>
-        <p>Bioma: Cerrado</p>
-        <p>Dicas:</p>
-        <ul>
-            <li>1. Tipo de vegetação predominante no Cerrado.</li>
-            <li>2. Planta típica do Cerrado, com folhas largas e espinhosas.</li>
-            <li>3. Animal conhecido como "onça-pintada" do Cerrado.</li>
-            <li>4. Tipo de solo característico do Cerrado.</li>
-            <li>5. Árvore típica do Cerrado, conhecida por seu tronco retorcido.</li>
-            <li>6. Planta do Cerrado com flores amarelas e folhas em formato de leque.</li>
-            <li>7. Nome de um animal grande que vive no Cerrado, conhecido como o "rei da savana".</li>
-            <li>8. Tipo de gramínea comum no Cerrado.</li>
-            <li>9. Nome de uma região protegida no Cerrado, famosa por sua biodiversidade.</li>
-            <li>10. Nome da árvore que produz o fruto conhecido como "pequi".</li>
-        </ul>
-        <div id="wordsearch"></div>
-        <button id="check" onclick="checkWords()">Verificar Palavras</button>
+        <h1>Caça-Palavras do Cerrado</h1>
+        <div id="puzzle-container"></div>
+        <div class="controls">
+            <button id="check-words">Verificar Palavras</button>
+            <button id="show-tips">Dicas</button>
+        </div>
+        <div id="tips"></div>
         <div id="result"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

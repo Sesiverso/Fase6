@@ -1,18 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d0f0c0; /* Cor clara para o fundo */
-    color: #4a5d23; /* Cor verde para o texto */
+    background-image: url('cerrado-background.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 20px;
+    border-radius: 15px;
 }
 
 h1 {
-    color: #2f4f2f; /* Verde escuro */
-    text-shadow: 2px 2px 5px #a9a9a9; /* Texto 3D */
+    color: #8b4513; /* Cor marrom claro */
+    text-shadow: 3px 3px 5px #a0522d; /* Texto 3D */
+    margin-bottom: 20px;
 }
 
 #puzzle-container {
@@ -30,33 +38,41 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     border: 1px solid #d2b48c; /* Cor de borda */
+    color: #6b8e23; /* Verde escuro */
+    text-shadow: 1px 1px 3px #a9a9a9; /* Texto 3D */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cell:hover {
     background-color: #deb887; /* Cor de destaque ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 button {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #fff;
     background-color: #8b4513; /* Cor marrom do cerrado */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    box-shadow: 3px 3px 5px #a0522d; /* Sombra para efeito 3D */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #a0522d; /* Cor marrom escuro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 #tips, #result {
     margin: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: #8b4513; /* Cor marrom claro */
+    text-shadow: 1px 1px 3px #a9a9a9; /* Texto 3D */
 }

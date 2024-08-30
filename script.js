@@ -1,18 +1,18 @@
-const gridSize = { rows: 6, cols: 9 };
 const words = [
-    "CERRADO", "MACAÚBA", "JABUTICABA", "BURITI", "EUCALIPTO",
-    "GAVIÃO", "CERRATENSE", "URUCUM", "CERRADINHO", "PEQUI"
+    "CERRADO", "BURITI", "ONCA", "LATOSSOLO", "FAVEIRA",
+    "IPÊ", "JAGUAR", "CAPI", "MICO", "PEQUI"
 ];
 
 const correctWords = new Set(words);
+const gridSize = 10;
 let selectedCells = [];
 let foundWords = new Set();
 
 const wordsearch = document.getElementById('wordsearch');
 
 function createGrid() {
-    for (let i = 0; i < gridSize.rows; i++) {
-        for (let j = 0; j < gridSize.cols; j++) {
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
             cell.dataset.row = i;
@@ -42,8 +42,8 @@ function placeWordInGrid(word) {
 
     switch(direction) {
         case 0:
-            startRow = Math.floor(Math.random() * gridSize.rows);
-            startCol = Math.floor(Math.random() * (gridSize.cols - word.length));
+            startRow = Math.floor(Math.random() * gridSize);
+            startCol = Math.floor(Math.random() * (gridSize - word.length));
             for (let i = 0; i < word.length; i++) {
                 const cell = document.querySelector(`.cell[data-row='${startRow}'][data-col='${startCol + i}']`);
                 cell.textContent = word[i];
@@ -51,8 +51,8 @@ function placeWordInGrid(word) {
             }
             break;
         case 1:
-            startRow = Math.floor(Math.random() * (gridSize.rows - word.length));
-            startCol = Math.floor(Math.random() * gridSize.cols);
+            startRow = Math.floor(Math.random() * (gridSize - word.length));
+            startCol = Math.floor(Math.random() * gridSize);
             for (let i = 0; i < word.length; i++) {
                 const cell = document.querySelector(`.cell[data-row='${startRow + i}'][data-col='${startCol}']`);
                 cell.textContent = word[i];
@@ -60,8 +60,8 @@ function placeWordInGrid(word) {
             }
             break;
         case 2:
-            startRow = Math.floor(Math.random() * (gridSize.rows - word.length));
-            startCol = Math.floor(Math.random() * (gridSize.cols - word.length));
+            startRow = Math.floor(Math.random() * (gridSize - word.length));
+            startCol = Math.floor(Math.random() * (gridSize - word.length));
             for (let i = 0; i < word.length; i++) {
                 const cell = document.querySelector(`.cell[data-row='${startRow + i}'][data-col='${startCol + i}']`);
                 cell.textContent = word[i];

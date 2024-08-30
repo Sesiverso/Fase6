@@ -1,79 +1,85 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Display', Arial, sans-serif;
     background-image: url('https://img.freepik.com/fotos-gratis/paisagem-natural-com-deserto-de-desenho-animado-e-natureza-seca_23-2151797450.jpg?t=st=1725024350~exp=1725027950~hmac=b35345e25189261e473d9415abb0dcd60e289b5a70c51100756a0911122a43c3&w=1060');
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     text-align: center;
     margin: 0;
-    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .container {
-    width: 80%;
-    margin: 20px auto;
+    min-height: 200vh;
+    padding: 50px;
+    box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
-    padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o container */
 }
 
 h1 {
     color: #8b4513; /* Cor marrom claro */
+    font-size: 4em;
     text-shadow: 3px 3px 5px #a0522d; /* Texto 3D */
     margin-bottom: 20px;
 }
 
-#puzzle-container {
+p, ul {
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#wordsearch {
     display: grid;
-    grid-template-columns: repeat(9, 40px);
-    grid-template-rows: repeat(6, 40px);
-    gap: 2px;
-    margin: 20px auto;
+    grid-template-columns: repeat(10, 30px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .cell {
-    width: 40px;
-    height: 40px;
-    background-color: #f5deb3; /* Cor do cerrado */
+    width: 30px;
+    height: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 1.5em;
-    font-weight: bold;
+    align-items: center;
+    background-color: #f5deb3; /* Cor do cerrado */
     border: 1px solid #d2b48c; /* Cor de borda */
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, background-color 0.3s;
     color: #6b8e23; /* Verde escuro */
     text-shadow: 1px 1px 3px #a9a9a9; /* Texto 3D */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cell:hover {
+    transform: scale(1.1);
     background-color: #deb887; /* Cor de destaque ao passar o mouse */
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    color: white;
+}
+
+.selected {
+    background-color: #007bff;
+    color: white;
 }
 
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #8b4513; /* Cor marrom do cerrado */
+    padding: 15px 30px;
+    font-size: 22px;
+    font-family: 'Display', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 3px 3px 5px #a0522d; /* Sombra para efeito 3D */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #a0522d; /* Cor marrom escuro ao passar o mouse */
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-#tips, #result {
-    margin: 20px;
-    font-size: 1.2em;
-    color: #8b4513; /* Cor marrom claro */
-    text-shadow: 1px 1px 3px #a9a9a9; /* Texto 3D */
-}
+    background-color: #8b4513; /* Cor marrom do cerrado */
+    color: white;
+    transition: all 0.3s;
+    box-shadow: 0 5px #1c7430, 0 8px 15px rgba(0, 0, 0, 0.

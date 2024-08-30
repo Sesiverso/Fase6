@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('cerrado-background.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('https://img.freepik.com/fotos-gratis/paisagem-natural-com-deserto-de-desenho-animado-e-natureza-seca_23-2151797450.jpg?t=st=1725024350~exp=1725027950~hmac=b35345e25189261e473d9415abb0dcd60e289b5a70c51100756a0911122a43c3&w=1060');
     background-size: cover;
     background-attachment: fixed;
     color: #333;
@@ -15,6 +15,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
     padding: 20px;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o container */
 }
 
 h1 {

@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caça-Palavras do Cerrado</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>Caça-Palavras do Cerrado</h1>
-        <div id="puzzle-container"></div>
-        <div class="controls">
-            <button id="check-words">Verificar Palavras</button>
-            <button id="show-tips">Dicas</button>
-        </div>
-        <div id="tips"></div>
+        <p>Bioma: Cerrado</p>
+        <p>Dicas:</p>
+        <ul>
+            <li>1. Tipo de planta comum no Cerrado, muito espinhosa.</li>
+            <li>2. Grande mamífero herbívoro típico do Cerrado.</li>
+            <li>3. Árvore conhecida por sua madeira dura e espinhos.</li>
+            <li>4. Região brasileira onde o Cerrado é predominante.</li>
+            <li>5. Nome de um tipo de gramínea encontrada no Cerrado.</li>
+        </ul>
+        <div id="wordsearch"></div>
+        <button id="check" onclick="checkWords()">Verificar Palavras</button>
         <div id="result"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
